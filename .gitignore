@@ -1,0 +1,23 @@
+# .gitignore
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore data folder
+data/
+
+# Ignore temporary files created by editors and operating systems
+*.log
+*.swp
+*.swo
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
