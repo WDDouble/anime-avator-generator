@@ -22,7 +22,7 @@ if not os.path.exists(output_dir):
 if not os.path.exists(no_faces_dir):
     os.makedirs(no_faces_dir)
 
-face_cascade = cv2.CascadeClassifier("check_points/lbpcascade_animeface.xml")
+face_cascade = cv2.CascadeClassifier("checkpoints/lbpcascade_animeface.xml")
 
 for image_name in tqdm(os.listdir(input_dir)):
     image_path = os.path.join(input_dir, image_name)

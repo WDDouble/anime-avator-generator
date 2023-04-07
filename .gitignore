@@ -12,6 +12,8 @@ env/
 
 # Ignore data folder
 data/
+chekpoints/
+res/
 
 # Ignore temporary files created by editors and operating systems
 *.log
