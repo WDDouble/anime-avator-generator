@@ -12,7 +12,7 @@ env/
 
 # Ignore data folder
 data/
-chekpoints/
+checkpoints/
 res/
 
 # Ignore temporary files created by editors and operating systems
@@ -21,5 +21,6 @@ res/
 *.swo
 *.tmp
 *.bak
+
 .DS_Store
 Thumbs.db
