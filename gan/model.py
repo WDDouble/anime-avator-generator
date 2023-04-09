@@ -8,8 +8,8 @@ import torch.utils.data as udata
 import torchvision.datasets as vdatasets
 import torchvision.transforms as transforms
 
-n_generator_feature = 512      # 生成器feature map数
-n_discriminator_feature = 128 
+n_generator_feature = 576    # 生成器feature map数
+n_discriminator_feature = 256
 
 class Generator(nn.Module):
     def __init__(self):
