@@ -14,6 +14,7 @@ env/
 data/
 checkpoints/
 res/
+Dockerfile/
 
 # Ignore temporary files created by editors and operating systems
 *.log

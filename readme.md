@@ -1,6 +1,7 @@
 # Anime Avatar Generator
 
 An anime avatar generator based on web scraping, OpenCV, and PROGAN.
+Online demo: http://anime-generator.s3-website.eu-central-1.amazonaws.com/
 
 ## Project Architecture
 
@@ -21,7 +22,7 @@ An anime avatar generator based on web scraping, OpenCV, and PROGAN.
 - [x] Git repository
 - [x] web scraper
 - [x] Image preprocessing
-- [ ] GAN model development
-- [ ] Web application development
-- [ ] Docker packaging
-- [ ] Deployment to cloud server
+- [x] GAN model development
+- [x] Web application development
+- [x] Docker packaging
+- [x] Deployment to cloud server

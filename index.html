@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <script>
+        async function generateImage() {
+            const apiUrl = "http://lb1-1098132491.eu-central-1.elb.amazonaws.com/generate";
+            const response = await fetch(apiUrl, { method: "POST" });
+            const data = await response.json();
+            const img = document.createElement("img");
+            img.src = "data:image/png;base64," + data.image;
+            document.getElementById("image-container").appendChild(img);
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Generator</h1>
+    <button onclick="generateImage()">Generate Image</button>
+    <div id="image-container"></div>
+</body>
+</html>
