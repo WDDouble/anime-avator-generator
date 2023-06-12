@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        small {
+            margin-bottom: 20px;
+        }
+        #image-container {
+            min-height: 20px;
+        }
+    </style>
+    <script>
+        async function generateImage() {
+            const apiUrl = "http://lb1-1098132491.eu-central-1.elb.amazonaws.com/generate";
+            const imageContainer = document.getElementById("image-container");
+            imageContainer.innerHTML = "Generating...";
+            const response = await fetch(apiUrl, { method: "POST" });
+            const data = await response.json();
+            const img = document.createElement("img");
+            img.src = "data:image/png;base64," + data.image;
+            imageContainer.innerHTML = "";
+            imageContainer.appendChild(img);
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Generator</h1>
+    <small>created by Chen</small>
+    <button onclick="generateImage()">Generate Image</button>
+    <div id="image-container"></div>
+</body>
+</html>
